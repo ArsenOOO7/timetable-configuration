@@ -1,0 +1,11 @@
+jwt:
+  token:
+    secret: secretJWTCypher
+    expires: 60
+    starts: Bearer
+
+springdoc:
+  swagger-ui:
+    path: /swagger/ui
+  api-docs:
+    path: /swagger/api
