@@ -14,3 +14,35 @@ eureka:
 elasticsearch:
   address: localhost
   port: 9200
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+  jpa:
+    show-sql: true
+  datasource:
+    url: jdbc:h2:mem:groups
+    username: sa
+    password: sa
+    driver-class-name: org.h2.Driver
+  h2:
+    console.enabled: true
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/group-service
+    username: postgres
+    password: postgres
+  sql:
+    init:
+      platform: postgres

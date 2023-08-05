@@ -10,3 +10,34 @@ eureka:
     fetch-registry: true
     instance:
       prefer-ip-address: true
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+  jpa:
+    show-sql: true
+  datasource:
+    url: jdbc:h2:mem:classrooms
+    username: sa
+    password: sa
+    driver-class-name: org.h2.Driver
+  h2:
+    console.enabled: true
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/classroom-service
+    username: postgres
+    password: postgres
+  sql:
+    init:
+      platform: postgres
