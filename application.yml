@@ -1,0 +1,9 @@
+# For all
+
+---
+spring:
+  profiles: local
+
+---
+spring:
+  profiles: production
