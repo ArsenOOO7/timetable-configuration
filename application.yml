@@ -1,8 +1,20 @@
+spring:
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog-master.xml
+
 ---
 spring:
   config:
     active:
       on-profile: local
+  liquibase:
+    contexts: local
+    url: jdbc:postgresql://localhost:5432/pnu_system
+    user: postgres
+    password: postgres
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pnu_system
 
 ---
 spring:
