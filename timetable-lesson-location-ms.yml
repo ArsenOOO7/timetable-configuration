@@ -1,3 +1,13 @@
+spring:
+  datasource:
+    username: lesson_location_user
+    password: 12345
+  liquibase:
+    database-change-log-table: dbchangelog_lesson_location_ms
+    database-change-log-lock-table: dbchangeloglock_lesson_location_ms
+    liquibase-schema: liquibase
+    default-schema: lesson_location_microservice
+
 ---
 spring:
   config:
