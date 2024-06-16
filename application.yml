@@ -10,11 +10,10 @@ spring:
       on-profile: local
   liquibase:
     contexts: local
-    url: jdbc:postgresql://localhost:5432/pnu_system
-    user: postgres
-    password: postgres
   datasource:
     url: jdbc:postgresql://localhost:5432/pnu_system
+    username: postgres
+    password: postgres
 
 ---
 spring:
