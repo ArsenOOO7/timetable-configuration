@@ -1,3 +1,13 @@
+spring:
+  datasource:
+    username: identity_access_user
+    password: 12345
+  liquibase:
+    database-change-log-table: dbchangelog_identity_access_ms
+    database-change-log-lock-table: dbchangeloglock_identity_access_ms
+    liquibase-schema: liquibase
+    default-schema: identity_access_microservice
+
 ---
 spring:
   config:

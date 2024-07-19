@@ -1,8 +1,19 @@
+spring:
+  datasource:
+    username: group_user
+    password: 12345
+  liquibase:
+    database-change-log-table: dbchangelog_group_ms
+    database-change-log-lock-table: dbchangeloglock_group_ms
+    liquibase-schema: liquibase
+    default-schema: group_microservice
+
 ---
 spring:
   config:
     active:
       on-profile: local
+
 
 ---
 spring:
