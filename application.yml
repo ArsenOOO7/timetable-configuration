@@ -3,6 +3,13 @@ spring:
     enabled: true
     change-log: classpath:db/changelog-master.xml
 
+
+
+timetable:
+  security:
+    allowed-origins:
+      - http://localhost:5173
+
 ---
 spring:
   config:

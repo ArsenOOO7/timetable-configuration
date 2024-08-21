@@ -8,6 +8,11 @@ spring:
     liquibase-schema: liquibase
     default-schema: identity_access_microservice
 
+  jpa:
+    properties:
+      hibernate:
+        default_schema: identity_access_microservice
+
 ---
 spring:
   config:
