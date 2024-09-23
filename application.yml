@@ -2,8 +2,10 @@ spring:
   liquibase:
     enabled: true
     change-log: classpath:db/changelog-master.xml
-
-
+  jpa:
+    properties:
+      hibernate:
+        default_schema: ${spring.liquibase.default-schema}
 
 timetable:
   security:
