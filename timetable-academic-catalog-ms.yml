@@ -8,6 +8,11 @@ spring:
     liquibase-schema: liquibase
     default-schema: academic_catalog_microservice
 
+  jpa:
+    properties:
+      hibernate:
+        default_schema: academic_catalog_microservice
+
 ---
 spring:
   config:
