@@ -28,6 +28,19 @@ spring:
   jpa:
     show-sql: true
 
+
+internal:
+  user:
+    login: internal.user@timetable.com
+    password: 1234
+
+baseUrl:
+  identity_access: http://localhost:7000
+  lesson_location: http://localhost:7001
+  academic_catalog: http://localhost:7002
+  group: http://localhost:7003
+  timetable: http://localhost:7004
+
 ---
 spring:
   config:
