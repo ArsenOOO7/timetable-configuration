@@ -14,6 +14,22 @@ spring:
     active:
       on-profile: local
 
+messaging:
+  rabbit:
+    queue:
+      user:
+        update: timetable-user-update-queue
+        delete: timetable-user-delete-queue
+      subject:
+        update: timetable-subject-update-queue
+        delete: timetable-subject-delete-queue
+      location:
+        update: timetable-location-update-queue
+        delete: timetable-location-delete-queue
+      group:
+        update: timetable-group-update-queue
+        delete: timetable-group-delete-queue
+
 ---
 spring:
   config:
