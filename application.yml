@@ -6,12 +6,9 @@ spring:
     properties:
       hibernate:
         default_schema: ${spring.liquibase.default-schema}
-
-timetable:
-  security:
-    allowed-origins:
-      - http://localhost:5173
-
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
 ---
 spring:
   config:
@@ -28,6 +25,9 @@ spring:
   jpa:
     show-sql: true
 
+  rabbitmq:
+    username: rabbit
+    password: password
 
 internal:
   user:
@@ -40,6 +40,10 @@ baseUrl:
   academic_catalog: http://localhost:7002
   group: http://localhost:7003
   timetable: http://localhost:7004
+
+messaging:
+  rabbit:
+    topic: timetable.topic
 
 ---
 spring:
