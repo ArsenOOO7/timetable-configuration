@@ -24,6 +24,8 @@ spring:
     password: postgres
   jpa:
     show-sql: true
+  elasticsearch:
+    uris: http://localhost:9200
 
   rabbitmq:
     username: rabbit

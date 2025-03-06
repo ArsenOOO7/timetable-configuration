@@ -7,6 +7,15 @@ spring:
     database-change-log-lock-table: dbchangeloglock_identity_access_ms
     liquibase-schema: liquibase
     default-schema: identity_access_microservice
+  jpa:
+    properties:
+      hibernate:
+        search:
+          backend.layout.strategy: no-alias
+          backend.dynamic_mapping: true
+          schema_management.strategy: none
+          backend:
+            hosts: localhost:9200
 
 ---
 spring:
