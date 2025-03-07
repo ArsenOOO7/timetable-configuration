@@ -23,6 +23,9 @@ spring:
     active:
       on-profile: local
 
+file-storage:
+  bucketName: timetable-identity-access
+
 ---
 spring:
   config:
