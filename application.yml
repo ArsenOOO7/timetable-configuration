@@ -42,6 +42,7 @@ baseUrl:
   academic_catalog: http://localhost:7002
   group: http://localhost:7003
   timetable: http://localhost:7004
+  laboratory_control: http://localhost:7005
 
 messaging:
   rabbit:

@@ -1,0 +1,37 @@
+spring:
+  datasource:
+    username: laboratory_control_user
+    password: 12345
+  liquibase:
+    database-change-log-table: dbchangelog_laboratory_control_ms
+    database-change-log-lock-table: dbchangeloglock_laboratory_control_ms
+    liquibase-schema: liquibase
+    default-schema: laboratory_control_microservice
+
+---
+spring:
+  config:
+    active:
+      on-profile: local
+
+file-storage:
+  bucketName: timetable-laboratory-control
+
+messaging:
+  rabbit:
+    queue:
+      user:
+        update: laboratory-control-user-update-queue
+        delete: laboratory-control-user-delete-queue
+      subject:
+        update: laboratory-control-subject-update-queue
+        delete: laboratory-control-subject-delete-queue
+      group:
+        update: laboratory-control-group-update-queue
+        delete: laboratory-control-group-delete-queue
+
+---
+spring:
+  config:
+    active:
+      on-profile: production
